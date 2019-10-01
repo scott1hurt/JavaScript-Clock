@@ -1,6 +1,25 @@
 body {
     background-color:black;
+    margin: 0;
     font-family:'Libre Baskerville', serif;
+}
+.headerContainer{
+background-color: #E9967A;
+}
+.headerContainer a {
+    /*Remember that this targets anchor elements inside any element using the headerContainer class */
+    padding: 16px  18px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+
+.headerContainer a:hover{
+    /*Change the styling for the anchor elements inside the headerContainer class when we mouse over them */
+    background-color: black;
+    color: #E9967A;
+    transform: rotate(360deg);
+    transition-duration: 4s;
 }
 
 #clockDisplay{
