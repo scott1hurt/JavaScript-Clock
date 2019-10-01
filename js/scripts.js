@@ -27,8 +27,65 @@ function showTime(){
    
     var time = hour + ":" + minute + ":" + seconds + " " + period; //String to store current time
     document.getElementById("clockDisplay").innerText = time;
+
+    //Getting the date 
+    var dayOfWeek = date.getDay();//Returns a value between 0 and 6 that corresponds to the current day of the week.
+    var dayOfMonth = date.getDate(); //Returns the current day in the month (1-31)
+    var month = date.getMonth(); //Returns a value between 0 and 11 that corresponds to the current month
+    var date = getDayOfTheWeek(dayOfWeek) + ", " + getMonth(month) + " " + dayOfMonth;
+    document.getElementById("dateDisplay").innerText = date;
+    
     
     setTimeout(showTime, 1000); // Schedule the showTime function to be called after 1000ms(1 second)
 
+}
+//Function to take in a number from 0-6 and return the proper day name 
+function getDayOfTheWeek(dayNum){
+    switch (dayNum){
+        case 0: 
+        return "Sunday";
+        case 1:
+        return "Monday";
+        case 2:
+        return "Tuesday";
+        case 3:
+        return "Wednesday";
+        case 4:
+        return "Thursday";
+        case 5:
+        return "Friday";
+        case 6:
+        return "Saturday";
+
+    }
+
+}
+function getMonth(monthNum){
+    switch(monthNum){
+        case 0:
+        return "January";
+        case 1:
+        return "February";
+        case 2:
+        return "March";
+        case 3:
+        return "April";
+        case 4:
+        return "May";
+        case 5:
+        return "June";
+        case 6:
+        return "July";
+        case 7:
+        return "August";
+        case 8:
+        return "September";
+        case 9:
+        return "October";
+        case 10:
+        return "November";
+        case 11:
+        return "December";
+    }
 }
 showTime();

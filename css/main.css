@@ -1,7 +1,22 @@
 body {
     background-color:black;
+    font-family:'Libre Baskerville', serif;
 }
 
 #clockDisplay{
-    color:white;
+    color: #E9967A;
+    position: absolute;
+    top: 50%; /* Move element down 50% of the height of the parent*/
+    left: 35%; /* Move element right 50% of the width of the parent */
+    transform: translate X(-50%) translate Y (-50%); /*Move the element 50% of it's width to left and 50% of it's height up */
+    font-size: 50px;
+}
+#dateDisplay {
+    color: #E9967A;
+    position: absolute;
+    top: 60%; /* Move element down 50% of the height of the parent*/
+    left: 35%; /* Move element right 50% of the width of the parent */
+    transform: translate X(-50%) translate Y (-50%); /*Move the element 50% of it's width to left and 50% of it's height up */
+    font-size: 50px;
+
 }
